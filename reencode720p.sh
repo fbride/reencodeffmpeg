@@ -94,7 +94,7 @@ else
     echo "Video does not meet criteria, re-encoding."
     # Check VIDEO_BITRATE
     if [[ "$VIDEO_BITRATE" -gt 800000 && "$VIDEO_BITRATE" -lt 1000000 ]]; then
-        FFMPEG_CMD+=" -map 0:v:0 -c:v libx265 -preset medium -crf 25"
+        FFMPEG_CMD+=" -map 0:v:0 -c:v libx265 -preset medium -crf 26"
     elif [[ "$VIDEO_BITRATE" -gt 1000000 ]]; then
         FFMPEG_CMD+=" -map 0:v:0 -c:v libx265 -preset medium -crf 28"
     else
